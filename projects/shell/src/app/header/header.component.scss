@@ -1,0 +1,43 @@
+header {
+    padding: 0.5rem;
+}
+
+nav{
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 16px;
+    margin: 0 1rem;
+}
+
+// requires disabling view encapsulation
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 36px;
+}
+
+/**
+* theme specific headers, requires: ViewEncapsulation.NONE
+*/
+.theme-light {
+    header {
+        background-color: var(--bg-light-lighter-1);
+    }
+
+    .logo {
+        color: var(--primary-color);
+    }
+}
+
+.theme-dark {
+    header {
+        background-color: var(--bg-dark-darker-1);
+    }
+
+    .logo {
+        color: var(--bg-light-darker-20);
+    }
+}

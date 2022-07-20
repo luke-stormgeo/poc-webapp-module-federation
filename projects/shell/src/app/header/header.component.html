@@ -1,0 +1,15 @@
+<header fxLayoutAlign="space-between">
+    <span fxLayoutAlign="start center" class="logo">StormGeo FAS</span>
+    <span fxLayoutAlign="start center" class="date" matTooltip="UTC: {{ date | date: 'dd LLL yyyy H:mm':'utc' }}">
+        {{ date | date: 'dd LLL yyyy H:mm' }}
+    </span>
+    <div fxLayoutAlign="start center">
+        <mat-button-toggle-group aria-label="Theme Selection" [value]="theme$ | async" (change)="toggleTheme($event)">
+            <mat-button-toggle value="light"><fa-icon [icon]="faSun"></fa-icon></mat-button-toggle>
+            <mat-button-toggle value="dark"><fa-icon [icon]="faMoon"></fa-icon></mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+</header>
+<nav>
+    <a routerLink="table">Table</a> | <a routerLink="map">Map</a> | <a routerLink="graph">Graph</a>
+</nav>
